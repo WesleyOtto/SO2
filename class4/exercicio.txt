@@ -1,0 +1,14 @@
+Exercicio 1
+
+i) O programa é executado em background, após seu termino é apresentado quantas vezes foi utilizado
+o sinal USR1. Isso ocorre pois toda vez que utilizamos o comando kill este envia um sinal que
+ é incrementando na função handler.
+
+Exercício 3
+
+O processo filho torna-se de status zumbi. Porque quando filho terminou, o pai não chama a função wait para que possa terminar o processo filho.
+
+Exercicio 4
+
+É possivel encontramos um filho zumbi se ficarnos monitorando o status do processo, pois o wait é executado ao receber um sinal
+e os sinais enviados são assincronos.Entretando serão limpados pelo processo pai assim que receber o sinal.

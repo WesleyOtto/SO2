@@ -1,0 +1,28 @@
+Exercicio 2
+
+d) Código de Retorno 3
+f)Código de Retorno 3
+g)
+appdyn :
+  linux-vdso.so.1 =>  (0x00007ffdaa094000)
+	libtestdyn.so => /usr/lib/libtestdyn.so (0x00007fe8224b1000)
+	libc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007fe8220e8000)
+	/lib64/ld-linux-x86-64.so.2 (0x000055f1764cc000)
+
+appsta:
+  linux-vdso.so.1 =>  (0x00007fffa91f4000)
+  libc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007f2fc7a17000)
+  /lib64/ld-linux-x86-64.so.2 (0x000055954057f000)
+
+h) Não, o estático é maior, pois todo código está incluido no executável (a bibliteca em si).
+Na dinâmica temos uma pequena burocracia, que faz essa chamada da biblioteca.
+
+Exercicio 3
+
+c)Não são iguais. o appsta(a biblioteca estática) ficou com mesmo valor de retorno (3), já o appsdyn
+ficou com o valor (4).
+O valor do executável da biblioteca estática não mudou pois não compilamos/criamos ele novamente.
+Como este é estático, a biblioteca encontra-se no executável, então ele se encontra com o código
+objeto antigo, e não o atualizado.
+Já o appdyn, como utilizamos uma biblioteca compartilhada, quando executamos , o valor de retorno é
+o atualizado, pois a biblioteca foi atualizada e dentro do executável chamamos ela dinamicamente.

@@ -1,0 +1,4 @@
+1)Sim, pois o pai e o filho acessam a mesma memória compartilhada. Então temos a condição de corrida,ou seja , pai e filho escrevem e leem a memória ao mesmo tempo.
+
+2)Com semafaro
+
